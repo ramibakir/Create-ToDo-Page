@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html lang="no">
-    <head>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-        <style></style>
-    </head>
-    <body>
-        <header>
-            <section class="headerFlex">
-                <h1>HIOF</h1>
-                <h3>Rami Bakir</h3>
-            </section>
-        </header>
-        <button><i class="material-icons">add</i>Todo</button>
-        <main>
-            <section class="cards">
-                <article>
-                    <h2>Todotitle</h2>
-                    <p>Fill open god isn't said. It seed gathering. Be seed, make doesn't light. Whales whose so very Creepeth in let, face years. Stars. 
-                    </p>
-                    <button>Delete</button>
-                    <button>Complete</button>
-                </article>
-                <article>
-                    <h2>Todotitle</h2>
-                    <p>Lights so I dominion, own upon called created, so green. Hath his rule place behold, winged lesser own gathered. Image lesser called upon beginning give shall you gathered his, likeness creepeth first stars there evening.
-                    </p>
-                    <button>Delete</button>
-                    <button>Complete</button> 
-                </article>
-                <article>
-                    <h2>Todotitle</h2>
-                    <p>Lights so I dominion, own upon called created, so green. Hath his rule place behold, winged lesser own gathered. Image lesser called upon beginning give shall you gathered his, likeness creepeth first stars there evening.
-                    </p>
-                    <button>Delete</button>
-                    <button>Complete</button>
-                </article>
-            </section>
-            <section class="completed">
-                <h2>Completed todos</h2>
-                <input type="checkbox" id="dateFilter">
-                <label for="dateFilter">Filter by date</label>
-            </section>
-        </main>
-    </body>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="todoOverview.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet"> 
+
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <style></style>
+</head>
+
+<body>
+    <header>
+        <section class="headerFlex">
+            <h1>HIOF</h1>
+            <h3>Rami Bakir</h3>
+        </section>
+    </header>
+    <button class="btn-addTodo"><i class="material-icons">add</i>Todo</button>
+    <main>
+        <section class="cards">
+            <article class="todoOne">
+                <h2>Todotitle</h2>
+                <p>Fill open god isn't said. It seed gathering. Be seed, make doesn't light. It seed gathering. Be seed, make doesn't light.
+                </p>
+                <button>Delete</button>
+                <button>Complete</button>
+            </article>
+            <article class="todoTwo">
+                <h2>Todotitle</h2>
+                <p>Lights so I dominion, own upon called created, so green. Hath his rule place behold, winged lesser
+                    own gathered. Image lesser called upon beginning give shall you gathered his, likeness creepeth
+                    first stars there evening.
+                </p>
+                <button>Delete</button>
+                <button>Complete</button>
+            </article>
+            <article class="todoThree">
+                <h2>Todotitle</h2>
+                <p>Lights so I dominion, own upon called created, so green. Hath his rule place behold, winged lesser
+                    own gathered. Image lesser called upon beginning give shall you gathered his, likeness creepeth
+                    first stars there evening.
+                </p>
+                <button>Delete</button>
+                <button>Complete</button>
+            </article>
+        </section>
+        <section class="completed">
+            <h2>Completed todos</h2>
+            <input type="checkbox" id="dateFilter">
+            <label for="dateFilter">Filter by date</label>
+        </section>
+    </main>
+</body>
+
 </html>
