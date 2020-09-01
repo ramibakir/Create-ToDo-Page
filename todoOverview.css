@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: 'Fira Code', monospace;
+    font-family: 'Nunito', sans-serif;
 }
 
 section, article {
@@ -13,7 +13,7 @@ section, article {
     justify-content: space-between;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.26);
     height: 80px;
-    margin-top: 5%;
+    
 }
 
 .btn-addTodo{
@@ -107,7 +107,7 @@ h1, h2, p {
 
 .contentLine1, .contentLine2, .contentLine3 {
     font-size: 12px;
-    color: rgba(0, 0, 0, 0.40);
+    color: rgba(0, 0, 0, 0.50);
     border-bottom: 1px solid rgba(0, 0, 0, 0.22);
 }
 
