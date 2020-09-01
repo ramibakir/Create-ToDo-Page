@@ -4,7 +4,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="todoOverview.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
@@ -12,13 +12,16 @@
 </head>
 
 <body>
+    <section id="overlay">
+
+    </section>
     <header>
         <section class="headerFlex">
             <h2>HIOF</h1>
-            <h2>Rami Bakir</h3>
+                <h2>Rami Bakir</h3>
         </section>
     </header>
-    <button class="btn-addTodo" type="button">
+    <button onclick="overlayOn()" class="btn-addTodo" id="turnOverlayOn" type="button">
         <span class="matIc">
             <i class="material-icons">add</i>
         </span>
@@ -27,7 +30,10 @@
         <section class="cards">
             <article class="todoOne">
                 <h2>Todotitle</h2>
-                <p>Lights so I dominion, own upon called created, so green. Hath his rule place behold, winged lesser own gathered. Image lesser called upon beginning give shall you gathered his, likeness creepeth first stars there evening.
+                <p>Lights so I dominion, own upon called created, so green. Hath his rule place behold, winged
+                    lesser
+                    own gathered. Image lesser called upon beginning give shall you gathered his, likeness creepeth
+                    first stars there evening.
                 </p>
                 <section class="btnContainer">
                     <button class="btn-delTodo" type="button">Delete</button>
@@ -36,7 +42,10 @@
             </article>
             <article class="todoTwo">
                 <h2>Todotitle</h2>
-                <p>Lights so I dominion, own upon called created, so green. Hath his rule place behold, winged lesser own gathered. Image lesser called upon beginning give shall you gathered his, likeness creepeth first stars there evening.
+                <p>Lights so I dominion, own upon called created, so green. Hath his rule place behold, winged
+                    lesser
+                    own gathered. Image lesser called upon beginning give shall you gathered his, likeness creepeth
+                    first stars there evening.
                 </p>
                 <section class="btnContainer">
                     <button class="btn-delTodo" type="button">Delete</button>
@@ -45,7 +54,10 @@
             </article>
             <article class="todoThree">
                 <h2>Todotitle</h2>
-                <p>Lights so I dominion, own upon called created, so green. Hath his rule place behold, winged lesser own gathered. Image lesser called upon beginning give shall you gathered his, likeness creepeth first stars there evening.
+                <p>Lights so I dominion, own upon called created, so green. Hath his rule place behold, winged
+                    lesser
+                    own gathered. Image lesser called upon beginning give shall you gathered his, likeness creepeth
+                    first stars there evening.
                 </p>
                 <section class="btnContainer">
                     <button class="btn-delTodo" type="button">Delete</button>
@@ -84,5 +96,7 @@
         </section>
     </main>
 </body>
+<!-- Allow DOM to load before running JS script -->
+<script src="todoScript.js"></script>
 
 </html>
