@@ -10,12 +10,15 @@ section, article {
 
 .headerFlex {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.26);
+    height: auto;
 }
 
 .btn-addTodo{
     margin-bottom: 10px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.26);
+    margin-top: 10px;;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.26);
     font-size: 24px;
 }
 
@@ -65,6 +68,21 @@ h1, h2, p {
 .dateSort {
     display: flex;
     justify-content: flex-end;
+}
+
+.tableHeader, .contentLine1, .contentLine2, .contentLine3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tableHeader {
+    background-color: rgba(0, 0, 0, 0.22);
+    margin-top: 5px;
+    height: 50px;
+}
+
+.contentLine1, .contentLine2, .contentLine3 {
+    font-size: 12px;
 }
 
 /* Rules for sizing the icon. */
