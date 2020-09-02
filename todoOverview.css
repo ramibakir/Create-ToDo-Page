@@ -125,6 +125,7 @@ h1, h2, p {
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
+/* Overlay and form creation underneath */
 #overlay {
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
@@ -136,5 +137,70 @@ h1, h2, p {
     bottom: 0;
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    justify-content: center;
+}
+
+.whiteBox {
+    width: 20%;
+    height: 50%;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.26);
+    margin: 200px auto;
+}
+
+#newTodoForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}  
+
+.btn-createTodo {
+    width: 80%;
+    margin-top: 5%;
+    margin-left: 7%;
+    height: 8%;
+    background-color: teal;
+    color: white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.26);
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+input[type=text] {
+    width: 80%;
+    height: 50px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    display: inline-block;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.26);
+}
+
+.formHeader {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10%;
+    align-items: center;
+}
+
+#btn-exitCreation {
+    margin-right: 10px;
+    border: none;
+    background: none;
+}
+
+.newTodoHeader, #formLabel {
+    font-weight: bold;
+}
+
+#charactersLeft {
+    font-size: 10px;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.60);
 }
 

@@ -13,7 +13,24 @@
 
 <body>
     <section id="overlay">
+        <section class="whiteBox">
+            <section class="formHeader">
+                <h2 class="newTodoHeader">New todo</h2>
+                <button onclick="overlayOff()" id="btn-exitCreation"><i class="material-icons" id="btn-exitCreation">clear</i></button>
+            </section>
+            <form id="newTodoForm" action="javascript:void(0);" autocomplete="off">
+                <label for="title" id="formLabel">Title</label>
+                <input type="text" placeholder="Enter Title" name="title" id="title" required>
 
+                <label for="description" id="formLabel">Description (<span id="charactersLeft">125</span> characters left)</label>
+                <input type="text" placeholder="Enter Description" name="description" id="description" maxlength="125"
+                    required>
+
+                <label for="author" id="formLabel">Author</label>
+                <input type="text" placeholder="Enter Author" name="author" id="author" required>
+            </form>
+            <button onclick="createTodo()" class="btn-createTodo" type="button">Create</button>
+        </section>
     </section>
     <header>
         <section class="headerFlex">
@@ -29,39 +46,27 @@
     <main>
         <section class="cards">
             <article class="todoOne">
-                <h2>Todotitle</h2>
-                <p>Lights so I dominion, own upon called created, so green. Hath his rule place behold, winged
-                    lesser
-                    own gathered. Image lesser called upon beginning give shall you gathered his, likeness creepeth
-                    first stars there evening.
-                </p>
+                <h2 id="todoOneTitle">Console log?</h2>
+                <p id="todoOneDescription">This is working.</p>
                 <section class="btnContainer">
-                    <button class="btn-delTodo" type="button">Delete</button>
-                    <button class="btn-cmpTodo" type="button">Complete</button>
+                    <button class="btn-delTodo" id="btn-delTodo1" type="button" onclick="deleteTodoOne()">Delete</button>
+                    <button class="btn-cmpTodo" id="btn-cmpTodo1" type="button" onclick="completeTodoOne()">Complete</button>
                 </section>
             </article>
             <article class="todoTwo">
-                <h2>Todotitle</h2>
-                <p>Lights so I dominion, own upon called created, so green. Hath his rule place behold, winged
-                    lesser
-                    own gathered. Image lesser called upon beginning give shall you gathered his, likeness creepeth
-                    first stars there evening.
-                </p>
+                <h2 id="todoTwoTitle">Working?</h2>
+                <p id="todoTwoDescription">I think.</p>
                 <section class="btnContainer">
-                    <button class="btn-delTodo" type="button">Delete</button>
-                    <button class="btn-cmpTodo" type="button">Complete</button>
+                    <button class="btn-delTodo" id="btn-delTodo2" type="button" onclick="deleteTodoTwo()">Delete</button>
+                    <button class="btn-cmpTodo" id="btn-cmpTodo2" type="button" onclick="completeTodoTwo()">Complete</button>
                 </section>
             </article>
             <article class="todoThree">
-                <h2>Todotitle</h2>
-                <p>Lights so I dominion, own upon called created, so green. Hath his rule place behold, winged
-                    lesser
-                    own gathered. Image lesser called upon beginning give shall you gathered his, likeness creepeth
-                    first stars there evening.
-                </p>
+                <h2 id="todoThreeTitle">Yes</h2>
+                <p id="todoThreeDescription">Not sure.</p>
                 <section class="btnContainer">
-                    <button class="btn-delTodo" type="button">Delete</button>
-                    <button class="btn-cmpTodo" type="button">Complete</button>
+                    <button class="btn-delTodo" id="btn-delTodo3" type="button" onclick="deleteTodoThree()">Delete</button>
+                    <button class="btn-cmpTodo" id="btn-cmpTodo3" type="button" onclick="completeTodoThree()">Complete</button>
                 </section>
             </article>
         </section>
@@ -77,22 +82,22 @@
             <p class="headerContent">Date Completed</p>
         </section>
         <section class="contentLine1">
-            <p>Todotitle</p>
-            <p>Author Author</p>
-            <p>Lights so I dominion</p>
-            <p>22.10.20</p>
+            <p id="titCL1">Todotitle</p>
+            <p id="autCL1">Author Author</p>
+            <p id="descCL1">Lights so I dominion</p>
+            <p id="dateCL1">22.10.20</p>
         </section>
         <section class="contentLine2">
-            <p>Todotitle</p>
-            <p>Author Author</p>
-            <p>Lights so I dominion</p>
-            <p>22.05.20</p>
+            <p id="titCL2">Todotitle</p>
+            <p id="autCL2">Author Author</p>
+            <p id="descCL2">Lights so I dominion</p>
+            <p id="dateCL2">22.05.20</p>
         </section>
         <section class="contentLine3">
-            <p>Todotitle</p>
-            <p>Author Author</p>
-            <p>Lights so I dominion</p>
-            <p>22.12.20</p>
+            <p id="titCL3">Todotitle</p>
+            <p id="autCL3">Author Author</p>
+            <p id="descCL3">Lights so I dominion</p>
+            <p id="dateCL3">22.12.20</p>
         </section>
     </main>
 </body>
