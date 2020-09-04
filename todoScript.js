@@ -1,8 +1,3 @@
-let todoTitles = [];
-let todoDescriptions = [];
-let todoAuthor = [];
-let todoDate = [];
-
 let dateObject = new Date();
 let today = dateObject.getDate() + '.' + (dateObject.getMonth() + 1) + '.' + dateObject.getFullYear();
 
@@ -102,11 +97,6 @@ let cardThree = {
     }
 };
 
-// todoTitles = [cardOne.title, cardTwo.title, cardThree.title];
-// todoDescriptions = [cardOne.description, cardTwo.description, cardThree.description];
-// todoAuthor = [cardOne.author, cardTwo.author, cardThree.author];
-// todoDate = [cardOne.date, cardTwo.date, cardThree.date];
-
 function overlayOn() {
     document.getElementById("overlay").style.display = "block";
     document.getElementById("description").onkeydown = countDown;
@@ -115,6 +105,53 @@ function overlayOn() {
 function overlayOff() {
     document.getElementById("overlay").style.display = "none";
 }
+
+document.getElementById("btn-cmpTodo1").addEventListener("click", event => {
+    for (let titles = 0; titles < todoTitles.length; titles++) {
+        if (todoTitles[titles] == todoOneTitle) {
+            document.getElementById("titCL1").innerHTML = todoTitles[titles];
+        }
+    }
+
+    for (let descriptions = 0; descriptions < todoDescriptions.length; descriptions++) {
+        if (todoDescriptions[descriptions] == todoOneDescription){
+            document.getElementById("descCL1").innerHTML = todoDescriptions[descriptions];
+        }
+    }
+
+
+    document.getElementById("dateCL1").innerHTML = today.toString();
+    todoDate.push(document.getElementById("dateCL1").innerHTML);
+
+    document.getElementById("todoOneTitle").innerHTML = "";
+    document.getElementById("todoOneDescription").innerHTML = "";
+    console.log("please");
+
+});
+
+document.getElementById("btn-cmpTodo2").addEventListener("click", event => {
+    document.getElementById("titCL2").innerHTML = document.getElementById("todoTwoTitle").innerHTML;
+    document.getElementById("descCL2").innerHTML = document.getElementById("todoTwoDescription").innerHTML;
+
+    document.getElementById("dateCL2").innerHTML = today.toString();
+    todoDate.push(document.getElementById("dateCL2").innerHTML);
+
+    document.getElementById("todoTwoTitle").innerHTML = "";
+    document.getElementById("todoTwoDescription").innerHTML = "";
+    console.log("??????");
+});
+
+document.getElementById("btn-cmpTodo3").addEventListener("click", event => {
+    document.getElementById("titCL3").innerHTML = document.getElementById("todoThreeTitle").innerHTML;
+    document.getElementById("descCL3").innerHTML = document.getElementById("todoThreeDescription").innerHTML;
+
+    document.getElementById("dateCL3").innerHTML = today.toString();
+    todoDate.push(document.getElementById("dateCL3").innerHTML);
+
+    document.getElementById("todoThreeTitle").innerHTML = "";
+    document.getElementById("todoThreeDescription").innerHTML = "";
+    console.log("FAEN");
+});
 
 document.getElementById("btn-createTodo").addEventListener("click", event => {
     let newTodo = {
@@ -199,23 +236,6 @@ document.getElementById("btn-createTodo").addEventListener("click", event => {
     document.getElementById("overlay").style.display = "none";
 });
 
-// function createTodo() {
-//     let newTodo = {
-//         title: document.getElementById("title").value,
-//         description: document.getElementById("description").value,
-//         author: document.getElementById("author").value,
-//         date: today
-//     };
-
-//     if (currentTitleOne != title && currentDescriptionOne != description) {
-//         document.getElementById("titCL1").innerHTML = currentTitleOne;
-//         document.getElementById("descCL1").innerHTML = currentDescriptionOne;
-//         document.getElementById("autCL1").innerHTML = "Rami Bakir";
-//         document.getElementById("dateCL1").innerHTML = "05.01.21";
-//     }
-//     document.getElementById("overlay").style.display = "none";
-// }
-
 function deleteTodoOne() {
     const delBtnOne = document.getElementById("btn-delTodo1").addEventListener("click", deleteTodoOne);
     document.getElementById("todoOneTitle").innerHTML = "";
@@ -233,53 +253,6 @@ function deleteTodoThree() {
     document.getElementById("todoThreeTitle").innerHTML = "";
     document.getElementById("todoThreeDescription").innerHTML = "";
 }
-
-document.getElementById("btn-cmpTodo1").addEventListener("click", event => {
-    for (let titles = 0; titles < todoTitles.length; titles++) {
-        if (todoTitles[titles] == todoOneTitle) {
-            document.getElementById("titCL1").innerHTML = todoTitles[titles];
-        }
-    }
-
-    for (let descriptions = 0; descriptions < todoDescriptions.length; descriptions++) {
-        if (todoDescriptions[descriptions] == todoOneDescription){
-            document.getElementById("descCL1").innerHTML = todoDescriptions[descriptions];
-        }
-    }
-
-
-    document.getElementById("dateCL1").innerHTML = today.toString();
-    todoDate.push(document.getElementById("dateCL1").innerHTML);
-
-    document.getElementById("todoOneTitle").innerHTML = "";
-    document.getElementById("todoOneDescription").innerHTML = "";
-    console.log("please");
-
-});
-
-document.getElementById("btn-cmpTodo2").addEventListener("click", event => {
-    document.getElementById("titCL2").innerHTML = document.getElementById("todoTwoTitle").innerHTML;
-    document.getElementById("descCL2").innerHTML = document.getElementById("todoTwoDescription").innerHTML;
-
-    document.getElementById("dateCL2").innerHTML = today.toString();
-    todoDate.push(document.getElementById("dateCL2").innerHTML);
-
-    document.getElementById("todoTwoTitle").innerHTML = "";
-    document.getElementById("todoTwoDescription").innerHTML = "";
-    console.log("??????");
-});
-
-document.getElementById("btn-cmpTodo3").addEventListener("click", event => {
-    document.getElementById("titCL3").innerHTML = document.getElementById("todoThreeTitle").innerHTML;
-    document.getElementById("descCL3").innerHTML = document.getElementById("todoThreeDescription").innerHTML;
-
-    document.getElementById("dateCL3").innerHTML = today.toString();
-    todoDate.push(document.getElementById("dateCL3").innerHTML);
-
-    document.getElementById("todoThreeTitle").innerHTML = "";
-    document.getElementById("todoThreeDescription").innerHTML = "";
-    console.log("FAEN");
-});
 
 function countDown() {
     document.getElementById("charactersLeft").innerHTML = 125 -
