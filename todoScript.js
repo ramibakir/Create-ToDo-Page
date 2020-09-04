@@ -3,12 +3,29 @@ let todoDescriptions = [];
 let todoAuthor = [];
 let todoDate = [];
 
-let todoOneTitle = document.getElementById("todoOneTitle").innerHTML;
-let todoOneDescription = document.getElementById("todoOneDescription").innerHTML;
-let todoTwoTitle = document.getElementById("todoTwoTitle").innerHTML;
-let todoTwoDescription = document.getElementById("todoTwoDescription").innerHTML;
-let todoThreeTitle = document.getElementById("todoThreeTitle").innerHTML;
-let todothreeDescription = document.getElementById("todoThreeDescription").innerHTML;
+let dateObject = new Date();
+let today = dateObject.getDate() + '.' + (dateObject.getMonth() + 1) + '.' + dateObject.getFullYear();
+
+let cardOne = {
+    title: document.getElementById("todoOneTitle").innerHTML,
+    description: document.getElementById("todoOneDescription").innerHTML,
+    author: "Rami Bakir",
+    date: today
+};
+
+let cardTwo = {
+    title: document.getElementById("todoTwoTitle").innerHTML,
+    description: document.getElementById("todoTwoDescription").innerHTML,
+    author: "Rami Bakir",
+    date: today
+};
+
+let cardThree = {
+    title: document.getElementById("todoThreeTitle").innerHTML,
+    description: document.getElementById("todoThreeDescription").innerHTML,
+    author: "Rami Bakir",
+    date: today
+};
 
 todoTitles = [todoOneTitle, todoTwoTitle, todoThreeTitle];
 todoDescriptions = [todoOneDescription, todoTwoDescription, todothreeDescription];
@@ -65,9 +82,6 @@ function deleteTodoThree() {
 }
 
 document.getElementById("btn-cmpTodo1").addEventListener("click", event => {
-    let dateObject = new Date();
-    let today = dateObject.getDate() + '.' + (dateObject.getMonth() + 1) + '.' + dateObject.getFullYear();
-
     for (let titles = 0; titles < todoTitles.length; titles++) {
         if (todoTitles[titles] == todoOneTitle) {
             document.getElementById("titCL1").innerHTML = todoTitles[titles];
@@ -91,9 +105,6 @@ document.getElementById("btn-cmpTodo1").addEventListener("click", event => {
 });
 
 document.getElementById("btn-cmpTodo2").addEventListener("click", event => {
-    let dateObject = new Date("2020-08-28");
-    let today = dateObject.getDate() + '.' + (dateObject.getMonth() + 1) + '.' + dateObject.getFullYear();
-
     document.getElementById("titCL2").innerHTML = document.getElementById("todoTwoTitle").innerHTML;
     document.getElementById("descCL2").innerHTML = document.getElementById("todoTwoDescription").innerHTML;
 
@@ -106,9 +117,6 @@ document.getElementById("btn-cmpTodo2").addEventListener("click", event => {
 });
 
 document.getElementById("btn-cmpTodo3").addEventListener("click", event => {
-    let dateObject = new Date('2020-09-01');
-    let today = dateObject.getDate() + '.' + (dateObject.getMonth() + 1) + '.' + dateObject.getFullYear();
-
     document.getElementById("titCL3").innerHTML = document.getElementById("todoThreeTitle").innerHTML;
     document.getElementById("descCL3").innerHTML = document.getElementById("todoThreeDescription").innerHTML;
 
@@ -129,11 +137,10 @@ document.getElementById("dateSorting").addEventListener("change", event => {
     console.log(todoDate + " unsorted");
     if(document.getElementById("dateSorting").checked){
         for (let date = 0; date < todoDate.length; date++) {
-           if (todo) {
+           if (date > todoDate[date]) {
                
            }
             console.log(todoDate + " was sorted");
         }
-        //console.log(todoDate + " was sorted");
     }
 });
