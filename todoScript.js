@@ -136,7 +136,23 @@ document.getElementById("btn-cmpTodo3").addEventListener("click", event => {
     document.getElementById("todoThreeDescription").innerHTML = "";
 });
 
+document.getElementById("btn-delTodo1").addEventListener("click", event => {
+    document.getElementById("todoOneTitle").innerHTML = "";
+    document.getElementById("todoOneDescription").innerHTML = "";
+});
+
+document.getElementById("btn-delTodo2").addEventListener("click", event => {
+    document.getElementById("todoTwoTitle").innerHTML = "";
+    document.getElementById("todoTwoDescription").innerHTML = "";
+});
+
+document.getElementById("btn-delTodo3").addEventListener("click", event => {
+    document.getElementById("todoThreeTitle").innerHTML = "";
+    document.getElementById("todoThreeDescription").innerHTML = "";
+});
+
 document.getElementById("btn-createTodo").addEventListener("click", event => {
+
     let newTodo = {
         title: document.getElementById("title").value,
         description: document.getElementById("description").value,
@@ -218,24 +234,6 @@ document.getElementById("btn-createTodo").addEventListener("click", event => {
 
     document.getElementById("overlay").style.display = "none";
 });
-
-function deleteTodoOne() {
-    const delBtnOne = document.getElementById("btn-delTodo1").addEventListener("click", deleteTodoOne);
-    document.getElementById("todoOneTitle").innerHTML = "";
-    document.getElementById("todoOneDescription").innerHTML = "";
-}
-
-function deleteTodoTwo() {
-    const delBtnTwo = document.getElementById("btn-delTodo2").addEventListener("click", deleteTodoTwo);
-    document.getElementById("todoTwoTitle").innerHTML = "";
-    document.getElementById("todoTwoDescription").innerHTML = "";
-}
-
-function deleteTodoThree() {
-    const delBtnThree = document.getElementById("btn-delTodo3").addEventListener("click", deleteTodoThree);
-    document.getElementById("todoThreeTitle").innerHTML = "";
-    document.getElementById("todoThreeDescription").innerHTML = "";
-}
 
 function countDown() {
     document.getElementById("charactersLeft").innerHTML = 125 -
