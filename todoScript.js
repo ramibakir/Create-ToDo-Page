@@ -107,50 +107,33 @@ function overlayOff() {
 }
 
 document.getElementById("btn-cmpTodo1").addEventListener("click", event => {
-    for (let titles = 0; titles < todoTitles.length; titles++) {
-        if (todoTitles[titles] == todoOneTitle) {
-            document.getElementById("titCL1").innerHTML = todoTitles[titles];
-        }
-    }
-
-    for (let descriptions = 0; descriptions < todoDescriptions.length; descriptions++) {
-        if (todoDescriptions[descriptions] == todoOneDescription){
-            document.getElementById("descCL1").innerHTML = todoDescriptions[descriptions];
-        }
-    }
-
-
-    document.getElementById("dateCL1").innerHTML = today.toString();
-    todoDate.push(document.getElementById("dateCL1").innerHTML);
+    document.getElementById("titCL1").innerHTML = cardOne.cardOneTitle;
+    document.getElementById("autCL1").innerHTML = cardOne.cardOneAuthor;
+    document.getElementById("descCL1").innerHTML = cardOne.cardOneDescription;
+    document.getElementById("dateCL1").innerHTML = cardOne.cardOneDate;
 
     document.getElementById("todoOneTitle").innerHTML = "";
     document.getElementById("todoOneDescription").innerHTML = "";
-    console.log("please");
-
 });
 
 document.getElementById("btn-cmpTodo2").addEventListener("click", event => {
-    document.getElementById("titCL2").innerHTML = document.getElementById("todoTwoTitle").innerHTML;
-    document.getElementById("descCL2").innerHTML = document.getElementById("todoTwoDescription").innerHTML;
-
-    document.getElementById("dateCL2").innerHTML = today.toString();
-    todoDate.push(document.getElementById("dateCL2").innerHTML);
-
+    document.getElementById("titCL2").innerHTML = cardTwo.cardTwoTitle;
+    document.getElementById("autCL2").innerHTML = cardTwo.cardTwoAuthor;
+    document.getElementById("descCL2").innerHTML = cardTwo.cardTwoDescription;
+    document.getElementById("dateCL2").innerHTML = cardTwo.cardTwoDate;
+    
     document.getElementById("todoTwoTitle").innerHTML = "";
     document.getElementById("todoTwoDescription").innerHTML = "";
-    console.log("??????");
 });
 
 document.getElementById("btn-cmpTodo3").addEventListener("click", event => {
-    document.getElementById("titCL3").innerHTML = document.getElementById("todoThreeTitle").innerHTML;
-    document.getElementById("descCL3").innerHTML = document.getElementById("todoThreeDescription").innerHTML;
-
-    document.getElementById("dateCL3").innerHTML = today.toString();
-    todoDate.push(document.getElementById("dateCL3").innerHTML);
+    document.getElementById("titCL3").innerHTML = cardThree.cardThreeTitle;
+    document.getElementById("autCL3").innerHTML = cardThree.cardThreeAuthor;
+    document.getElementById("descCL3").innerHTML = cardThree.cardThreeDescription;
+    document.getElementById("dateCL3").innerHTML = cardThree.cardThreeDate;
 
     document.getElementById("todoThreeTitle").innerHTML = "";
     document.getElementById("todoThreeDescription").innerHTML = "";
-    console.log("FAEN");
 });
 
 document.getElementById("btn-createTodo").addEventListener("click", event => {
