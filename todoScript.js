@@ -10,25 +10,102 @@ let cardOne = {
     title: document.getElementById("todoOneTitle").innerHTML,
     description: document.getElementById("todoOneDescription").innerHTML,
     author: "Rami Bakir",
-    date: today
+    date: today,
+    updated: false,
+    get cardOneTitle() {
+        return `${cardOne.title}`;
+    },
+    get cardOneDescription() {
+        return `${cardOne.description}`;
+    },
+    get cardOneAuthor() {
+        return `${cardOne.author}`;
+    },
+    get cardOneDate() {
+        return `${cardOne.date}`;
+    },
+    set cardOneTitle(title) {
+        this.title = title;
+    },
+    set cardOneDescription(description) {
+        this.description = description;
+    },
+    set cardOneAuthor(author) {
+        this.author = author;
+    },
+    set cardOneDate(date) {
+        this.date = date;
+    }
 };
 
 let cardTwo = {
     title: document.getElementById("todoTwoTitle").innerHTML,
     description: document.getElementById("todoTwoDescription").innerHTML,
     author: "Rami Bakir",
-    date: today
+    date: today,
+    updated: false,
+    get cardTwoTitle() {
+        return `${cardTwo.title}`;
+    },
+    get cardTwoDescription() {
+        return `${cardTwo.description}`;
+    },
+    get cardTwoAuthor() {
+        return `${cardTwo.author}`;
+    },
+    get cardTwoDate() {
+        return `${cardTwo.date}`;
+    },
+    set cardTwoTitle(title) {
+        this.title = title;
+    },
+    set cardTwoDescription(description) {
+        this.description = description;
+    },
+    set cardTwoAuthor(author) {
+        this.author = author;
+    },
+    set cardTwoDate(date) {
+        this.date = date;
+    }
 };
 
 let cardThree = {
     title: document.getElementById("todoThreeTitle").innerHTML,
     description: document.getElementById("todoThreeDescription").innerHTML,
     author: "Rami Bakir",
-    date: today
+    date: today,
+    updated: false,
+    get cardThreeTitle() {
+        return `${cardThree.title}`;
+    },
+    get cardThreeDescription() {
+        return `${cardThree.description}`;
+    },
+    get cardThreeAuthor() {
+        return `${cardThree.author}`;
+    },
+    get cardThreeDate() {
+        return `${cardThree.date}`;
+    },
+    set cardThreeTitle(title) {
+        this.title = title;
+    },
+    set cardThreeDescription(description) {
+        this.description = description;
+    },
+    set cardThreeAuthor(author) {
+        this.author = author;
+    },
+    set cardThreeDate(date) {
+        this.date = date;
+    }
 };
 
-todoTitles = [todoOneTitle, todoTwoTitle, todoThreeTitle];
-todoDescriptions = [todoOneDescription, todoTwoDescription, todothreeDescription];
+// todoTitles = [cardOne.title, cardTwo.title, cardThree.title];
+// todoDescriptions = [cardOne.description, cardTwo.description, cardThree.description];
+// todoAuthor = [cardOne.author, cardTwo.author, cardThree.author];
+// todoDate = [cardOne.date, cardTwo.date, cardThree.date];
 
 function overlayOn() {
     document.getElementById("overlay").style.display = "block";
@@ -39,29 +116,105 @@ function overlayOff() {
     document.getElementById("overlay").style.display = "none";
 }
 
-function createTodo() {
-    let title = document.getElementById("title").value;
-    let description = document.getElementById("description").value;
-    let author = document.getElementById("author").value;
+document.getElementById("btn-createTodo").addEventListener("click", event => {
+    let newTodo = {
+        title: document.getElementById("title").value,
+        description: document.getElementById("description").value,
+        author: document.getElementById("author").value,
+        date: today,
+        get newTitle() {
+            return `${newTodo.title}`;
+        },
+        get newDescription() {
+            return `${newTodo.description}`;
+        },
+        get newAuthor() {
+            return `${newTodo.author}`;
+        },
+        get newDate() {
+            return `${newTodo.date}`;
+        }
+    };
 
-    todoTitles.push(title);
-    todoDescriptions.push(description);
-    todoAuthor.push(author);
+    if(cardOne.updated == false){
+        document.getElementById("todoOneTitle").innerHTML = newTodo.newTitle;
+        cardOne.cardOneTitle = document.getElementById("todoOneTitle").innerHTML;
 
-    const currentTitleOne = document.getElementById("todoOneTitle").innerHTML;
-    const currentDescriptionOne = document.getElementById("todoOneDescription").innerHTML;
+        document.getElementById("todoOneDescription").innerHTML = newTodo.newDescription;
+        cardOne.description.innerHTML = document.getElementById("todoOneDescription").innerHTML;
 
-    document.getElementById("todoOneTitle").innerHTML = title;
-    document.getElementById("todoOneDescription").innerHTML = description;
+        cardOne.cardOneAuthor = newTodo.author;
+        cardOne.cardOneDate = newTodo.newDate;
 
-    if (currentTitleOne != title && currentDescriptionOne != description) {
-        document.getElementById("titCL1").innerHTML = currentTitleOne;
-        document.getElementById("descCL1").innerHTML = currentDescriptionOne;
-        document.getElementById("autCL1").innerHTML = "Rami Bakir";
-        document.getElementById("dateCL1").innerHTML = "05.01.21";
+        cardOne.updated = true;
+        console.log("CardOne: ");
+        console.log(cardOne);
+
     }
+    else if(cardTwo.updated == false){
+        document.getElementById("todoTwoTitle").innerHTML = newTodo.newTitle;
+        cardTwo.cardTwoTitle = document.getElementById("todoTwoTitle").innerHTML;
+
+        document.getElementById("todoTwoDescription").innerHTML = newTodo.newDescription;
+        cardTwo.cardTwoDescription = document.getElementById("todoTwoDescription").innerHTML;
+
+        cardTwo.cardTwoAuthor = newTodo.newAuthor;
+        cardTwo.cardTwoDate = newTodo.newDate;
+
+        cardTwo.updated = true;
+        console.log("CardTwo: ");
+        console.log(cardTwo);
+    }
+    else if(cardThree.updated == false){
+        document.getElementById("todoThreeTitle").innerHTML = newTodo.newTitle;
+        cardThree.cardThreeTitle = document.getElementById("todoThreeTitle").innerHTML;
+
+        document.getElementById("todoThreeDescription").innerHTML = newTodo.newDescription;
+        cardThree.cardThreeDescription = document.getElementById("todoThreeDescription").innerHTML;
+
+        cardThree.cardThreeAuthor = newTodo.newAuthor;
+        cardThree.cardThreeDate = newTodo.newDate;
+        
+        cardThree.updated = true;
+        console.log("CardThree: ");
+        console.log(cardThree);
+    }
+
+    if(cardOne.updated == true){
+        setInterval(() => {
+            cardOne.updated = false;
+        }, 30000);
+    }
+    if(cardTwo.updated == true){
+        setInterval(() => {
+            cardTwo.updated = false;
+        }, 30000);
+    }
+    if(cardThree.updated == true){
+        setInterval(() => {
+            cardThree.updated = false;
+        }, 30000);
+    }
+
     document.getElementById("overlay").style.display = "none";
-}
+});
+
+// function createTodo() {
+//     let newTodo = {
+//         title: document.getElementById("title").value,
+//         description: document.getElementById("description").value,
+//         author: document.getElementById("author").value,
+//         date: today
+//     };
+
+//     if (currentTitleOne != title && currentDescriptionOne != description) {
+//         document.getElementById("titCL1").innerHTML = currentTitleOne;
+//         document.getElementById("descCL1").innerHTML = currentDescriptionOne;
+//         document.getElementById("autCL1").innerHTML = "Rami Bakir";
+//         document.getElementById("dateCL1").innerHTML = "05.01.21";
+//     }
+//     document.getElementById("overlay").style.display = "none";
+// }
 
 function deleteTodoOne() {
     const delBtnOne = document.getElementById("btn-delTodo1").addEventListener("click", deleteTodoOne);
