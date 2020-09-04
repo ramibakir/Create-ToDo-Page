@@ -14,7 +14,6 @@ paragraf.classList.add("jsCardioParagraph");
 main.appendChild(paragraf);
 // Lage en select box
 const selectBox = document.createElement('select');
-
 main.appendChild(selectBox);
 // Populere selectboksen basert på et object / array(Ex.const myObj = [{ id: 1, data: "text" }, { id: 2, date: "text2"])
 const optGroup1 = document.createElement('optgroup');
@@ -48,6 +47,9 @@ resetButton.value = "Reset";
 selectBox.parentNode.insertBefore(testButton, selectBox.nextSibling);
 selectBox.parentNode.insertBefore(resetButton, selectBox.nextSibling);
 // Lage en "click" eventlistener på knappene
+testButton.addEventListener("click", event => {
+    paragraf.innerHTML = option1.innerHTML;
+});
 // Klikk på test knappen skal skrive ut teksten i paragrafen.Utskriften skal være reversert og første bokstav er fjernet i hvert ord. (Enten som ny < p > eller i den "gamle" <p>)
 // Lage en ul med 4 listeelementer
 // Legge til en deleteknappe til hvert listeelement
