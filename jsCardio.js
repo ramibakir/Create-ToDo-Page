@@ -47,40 +47,15 @@ resetButton.value = "Reset";
 selectBox.parentNode.insertBefore(testButton, selectBox.nextSibling);
 selectBox.parentNode.insertBefore(resetButton, selectBox.nextSibling);
 // Lage en "click" eventlistener på knappene
-let words = [paragraf.innerHTML.split(" ")];
+let words = paragraf.innerHTML.split(" "); //.split() returns array
 let splitWord = [];
-let characters = [];
-
-for (let i = 0; i < words.length; i++) {
-    for (let j = 0; j < words[i].length; j++) {
-        splitWord.push(words[i][j]);
-    }
-}
-console.log(splitWord);
-
-for (let i = 0; i < splitWord.length; i++) {
-    for (let j = 0; j < splitWord[i].length; j++) {
-        // splitWord[i].splice(i, 1);
-        // console.log(splitWord.splice(0, 1));
-        // console.log(splitWord[i][0] + "a");
-        // console.log(splitWord[i].splice(i, 1) + " ssss");
-    }
-}
-
-// for (const word of splitWord) {
-
-//     characters.push(word.split(""));
-// }
-// console.log(characters);
-
-// for(let i = 0; i < characters.length; i++){
-//     for (let j = 0; j < characters[i].length; j++) {
-
-//     }
-// }
 
 testButton.addEventListener("click", event => {
-    paragraf.innerHTML = option1.innerHTML;
+    for (let i = 0; i < words.length; i++) {
+        splitWord.push(words[i].replace(words[i].substr(0, 1), ''));
+    }
+
+    paragraf.innerHTML = splitWord.reverse().join(" ");
 });
 
 resetButton.addEventListener("click", event => {
@@ -89,9 +64,9 @@ resetButton.addEventListener("click", event => {
         let liButton = document.createElement('button');
         uList.appendChild(li);
         li.appendChild(liButton);
-    
+
         li.id = "liTag" + i;
-    
+
         liButton.innerHTML = "Delete";
         liButton.id = "liButton" + i;
     }

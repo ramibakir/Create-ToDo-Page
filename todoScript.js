@@ -224,12 +224,12 @@ document.getElementById("btn-createTodo").addEventListener("click", event => {
     if(cardTwo.updated == true){
         setInterval(() => {
             cardTwo.updated = false;
-        }, 30000);
+        }, 31000);
     }
     if(cardThree.updated == true){
         setInterval(() => {
             cardThree.updated = false;
-        }, 30000);
+        }, 32000);
     }
 
     document.getElementById("overlay").style.display = "none";
@@ -240,14 +240,14 @@ function countDown() {
         document.getElementById("description").value.length;
 }
 
-document.getElementById("dateSorting").addEventListener("change", event => {
-    console.log(todoDate + " unsorted");
-    if(document.getElementById("dateSorting").checked){
-        for (let date = 0; date < todoDate.length; date++) {
-           if (date > todoDate[date]) {
+// document.getElementById("dateSorting").addEventListener("change", event => {
+//     console.log(todoDate + " unsorted");
+//     if(document.getElementById("dateSorting").checked){
+//         for (let date = 0; date < todoDate.length; date++) {
+//            if (date > todoDate[date]) {
                
-           }
-            console.log(todoDate + " was sorted");
-        }
-    }
-});
+//            }
+//             console.log(todoDate + " was sorted");
+//         }
+//     }
+// });
