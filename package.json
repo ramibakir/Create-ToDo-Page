@@ -1,0 +1,39 @@
+{
+  "name": "Create-ToDo-Page",
+  "version": "1.0.0",
+  "description": "Oblig 2 i Webapplikasjoner",
+  "main": "webpack.common.config.js",
+  "scripts": {
+    "build": "webpack --config webpack.production.config.js",
+    "start": "webpack-dev-server --config webpack.development.config.js",
+    "clean": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramibakir/Create-ToDo-Page.git"
+  },
+  "keywords": [],
+  "author": "Rami Bakir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramibakir/Create-ToDo-Page/issues"
+  },
+  "homepage": "https://github.com/ramibakir/Create-ToDo-Page#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "eslint": "^7.8.1",
+    "eslint-plugin-react": "^7.20.6",
+    "html-webpack-plugin": "^4.4.1",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.4"
+  }
+}

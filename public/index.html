@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <!--link rel="stylesheet" type="text/css" href="todoOverview.css" / -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <style></style>
+  </head>
+
+  <body>
+    <section id="overlay">
+      <section class="whiteBox">
+        <section class="formHeader">
+          <h2 class="newTodoHeader">New todo</h2>
+          <button onclick="overlayOff()" id="btn-exitCreation">
+            <i class="material-icons" id="btn-exitCreation">clear</i>
+          </button>
+        </section>
+        <form id="newTodoForm" action="javascript:void(0);" autocomplete="off">
+          <label for="title" id="formLabel">Title</label>
+          <input
+            type="text"
+            placeholder="Enter Title"
+            name="title"
+            id="title"
+            required
+          />
+
+          <label for="description" id="formLabel"
+            >Description (<span id="charactersLeft">125</span> characters
+            left)</label
+          >
+          <input
+            type="text"
+            placeholder="Enter Description"
+            name="description"
+            id="description"
+            maxlength="125"
+            required
+          />
+
+          <label for="author" id="formLabel">Author</label>
+          <input
+            type="text"
+            placeholder="Enter Author"
+            name="author"
+            id="author"
+            required
+          />
+        </form>
+        <button class="btn-createTodo" id="btn-createTodo" type="button">
+          Create
+        </button>
+      </section>
+    </section>
+    <header>
+      <section class="headerFlex">
+        <h2>HIOF</h2>
+        <h2>Rami Bakir</h2>
+      </section>
+    </header>
+    <button
+      onclick="overlayOn()"
+      class="btn-addTodo"
+      id="turnOverlayOn"
+      type="button"
+    >
+      <span class="matIc">
+        <i class="material-icons">add</i>
+      </span>
+      Todo
+    </button>
+    <main>
+      <section class="cards">
+        <article class="todoOne">
+          <h2 id="todoOneTitle">Console log?</h2>
+          <p id="todoOneDescription">This is working.</p>
+          <section class="btnContainer">
+            <button class="btn-delTodo" id="btn-delTodo1" type="button">
+              Delete
+            </button>
+            <button class="btn-cmpTodo" id="btn-cmpTodo1" type="button">
+              Complete
+            </button>
+          </section>
+        </article>
+        <article class="todoTwo">
+          <h2 id="todoTwoTitle">Working?</h2>
+          <p id="todoTwoDescription">I think.</p>
+          <section class="btnContainer">
+            <button class="btn-delTodo" id="btn-delTodo2" type="button">
+              Delete
+            </button>
+            <button class="btn-cmpTodo" id="btn-cmpTodo2" type="button">
+              Complete
+            </button>
+          </section>
+        </article>
+        <article class="todoThree">
+          <h2 id="todoThreeTitle">Yes</h2>
+          <p id="todoThreeDescription">Not sure.</p>
+          <section class="btnContainer">
+            <button class="btn-delTodo" id="btn-delTodo3" type="button">
+              Delete
+            </button>
+            <button class="btn-cmpTodo" id="btn-cmpTodo3" type="button">
+              Complete
+            </button>
+          </section>
+        </article>
+      </section>
+      <h2>Completed todos</h2>
+      <section class="dateSort">
+        <input type="checkbox" id="dateSorting" autocomplete="off" />
+        <label for="dateSorting">Sort by date</label>
+      </section>
+      <section class="tableHeader">
+        <p class="headerContent">Title</p>
+        <p class="headerContent">Author</p>
+        <p class="headerContent">Description</p>
+        <p class="headerContent">Date Completed</p>
+      </section>
+      <section class="contentLine1">
+        <p id="titCL1">Todotitle</p>
+        <p id="autCL1">Author Author</p>
+        <p id="descCL1">Lights so I dominion</p>
+        <p id="dateCL1">22.10.20</p>
+      </section>
+      <section class="contentLine2">
+        <p id="titCL2">Todotitle</p>
+        <p id="autCL2">Author Author</p>
+        <p id="descCL2">Lights so I dominion</p>
+        <p id="dateCL2">22.05.20</p>
+      </section>
+      <section class="contentLine3">
+        <p id="titCL3">Todotitle</p>
+        <p id="autCL3">Author Author</p>
+        <p id="descCL3">Lights so I dominion</p>
+        <p id="dateCL3">22.12.20</p>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+  <!-- Allow DOM to load before running JS script -->
+</html>
