@@ -1,4 +1,4 @@
-import './styles.scss';
+import './style.scss';
 
 let dateObject = new Date();
 let today = dateObject.getDate() + '/' + (dateObject.getMonth() + 1) + '/' + dateObject.getFullYear();
