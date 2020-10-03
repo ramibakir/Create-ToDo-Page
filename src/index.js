@@ -6,7 +6,7 @@ const cards = [
     {
         title: document.getElementById("todoOneTitle").innerHTML,
         description: document.getElementById("todoOneDescription").innerHTML,
-        author: "Rami Bakir",
+        author: "",
         date: today,
         updated: false,
         get cardOneTitle() {
